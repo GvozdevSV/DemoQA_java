@@ -14,6 +14,7 @@ public class TextBoxPage extends BasePage {
     private final By inputUserEmailField = By.cssSelector("input[id='userEmail']");
     private final By currentAddressField = By.cssSelector("textarea[id='currentAddress']");
     private final By permanentAddressField = By.cssSelector("textarea[id='permanentAddress']");
+    private final By submitButton = By.cssSelector("button[id=\"submit\"]");
 
 
     public TextBoxPage assertInput() {
@@ -21,5 +22,10 @@ public class TextBoxPage extends BasePage {
         Assert.state(true, String.valueOf(fullName.isDisplayed()));
         return this;
 
+    }
+    public TextBoxPage feelAllFields(){
+        driver.findElement(inputFullNameField).sendKeys("jgkggi");
+        driver.findElement(submitButton).click();
+        return this;
     }
 }
