@@ -1,10 +1,13 @@
 package pages.elements_page;
 
+import constants.Generator;
 import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.pages_base.BasePage;
+
+
 
 public class TextBoxPage extends BasePage {
     public TextBoxPage(WebDriver driver) {
@@ -24,7 +27,8 @@ public class TextBoxPage extends BasePage {
 
     }
     public TextBoxPage feelAllFields(){
-        driver.findElement(inputFullNameField).sendKeys("jgkggi");
+        driver.findElement(inputFullNameField).sendKeys();
+        driver.findElement(inputUserEmailField).sendKeys("jgkggi");
         driver.findElement(submitButton).click();
         return this;
     }
