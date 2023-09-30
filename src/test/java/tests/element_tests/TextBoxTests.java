@@ -10,6 +10,7 @@ public class TextBoxTests extends BaseTest {
 @Test
     public void checkInputField(){
         basePage.open(TEST_BOX_DEMO_QA_PAGE);
+        textBoxPage.assertInput();
         textBoxPage.feelAllFields();
     }
 }

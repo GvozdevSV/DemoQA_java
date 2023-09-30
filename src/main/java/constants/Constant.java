@@ -11,6 +11,7 @@ public class Constant {
     }
     public static class Urls {
         public static final String TEST_BOX_DEMO_QA_PAGE = "https://demoqa.com/text-box";
+        public static final String CHECK_BOX_DEMO_QA_PAGE = "https://demoqa.com/checkbox";
     }
 
 

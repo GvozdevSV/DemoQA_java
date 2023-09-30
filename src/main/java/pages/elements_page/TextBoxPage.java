@@ -1,15 +1,15 @@
 package pages.elements_page;
 
-import constants.Generator.Generate;
-import dev.failsafe.internal.util.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import pages.pages_base.BasePage;
 
 
 import static constants.Generator.Generate.*;
-import static org.testng.Assert.*;
+
 
 
 public class TextBoxPage extends BasePage {
@@ -30,8 +30,9 @@ public class TextBoxPage extends BasePage {
 
 
     public TextBoxPage assertInput() {
+        //Проверяем что элемент присутствует на странице
         WebElement fullName = driver.findElement(inputFullNameField);
-        Assert.state(true, String.valueOf(fullName.isDisplayed()));
+        Assert.assertTrue(fullName.isDisplayed(), "Поле полное имя отсутствует на странице" );
         return this;
 
     }
