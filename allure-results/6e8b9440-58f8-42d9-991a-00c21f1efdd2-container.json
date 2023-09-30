@@ -1,0 +1,1 @@
+{"uuid":"6e8b9440-58f8-42d9-991a-00c21f1efdd2","name":"DemoQA_java","children":["168922e6-dedd-4c0e-9738-b0053f2bfee6"],"befores":[],"afters":[{"name":"clearCookiesAndLocalStorage","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1696040419556,"stop":1696040419585}],"start":1696040398283,"stop":1696040419586}
