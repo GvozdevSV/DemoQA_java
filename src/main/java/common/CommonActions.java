@@ -1,15 +1,10 @@
 package common;
 
-import org.openqa.selenium.Dimension;
+import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.Assert;
-
 import java.time.Duration;
-
-
 import static common.Config.PLATFORM_AND_BROWSER;
 import static constants.Constant.TimeoutVariable.IMPLICIT_WAIT;
 
@@ -24,12 +19,8 @@ public class CommonActions {
                 options.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(options);
                 break;
-            case "win_edge":
-                System.setProperty("webDriver.edge.driver", "src/main/resources/msedgedriver.exe");
-                driver = new EdgeDriver();
-                break;
-            default:
-                Assert.fail("Incorrect platform or browser name: " + PLATFORM_AND_BROWSER);
+
+
         }
 
         driver.manage().window().maximize();

@@ -2,6 +2,7 @@ package pages.elements_page;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -41,8 +42,16 @@ public class TextBoxPage extends BasePage {
         driver.findElement(inputFullNameField).sendKeys(FULL_NAME);
         driver.findElement(inputUserEmailField).sendKeys(E_MAIL);
         driver.findElement(currentAddressField).sendKeys(CURRENT_ADDRESS);
-        driver.findElement(permanentAddressField ).sendKeys(PERMANENT_ADDRESS);
-        driver.findElement(submitButton).click();
+        //driver.findElement(permanentAddressField ).sendKeys(PERMANENT_ADDRESS);
+        waitElementIsVisible(driver.findElement(permanentAddressField) ).sendKeys(PERMANENT_ADDRESS);
+        //driver.findElement(submitButton).click();
+        try {
+            scrollToElement(driver.findElement(submitButton));
+            driver.findElement(submitButton).click();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
 
         //Берем текст
         String outputName = driver.findElement(nameText).getText().split(":")[1];
