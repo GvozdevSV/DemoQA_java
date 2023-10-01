@@ -18,5 +18,8 @@ public class CheckBoxPage extends BasePage {
         return this;
 
     }
+    public clickRandomChecbox(){
+
+    }
 
 }

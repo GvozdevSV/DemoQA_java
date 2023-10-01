@@ -3,6 +3,11 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/��/IdeaProjects/DemoQA_java">
         <classes>
+            <class name="tests.element_tests.CheckBoxTests">
+                <methods>
+                    <include name="checkBoxTests"/>
+                </methods>
+            </class>
             <class name="tests.element_tests.TextBoxTests">
                 <methods>
                     <include name="checkInputField"/>
