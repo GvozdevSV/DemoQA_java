@@ -11,5 +11,7 @@ public class CheckBoxTests extends BaseTest {
     public void checkBoxTests(){
         basePage.open(CHECK_BOX_DEMO_QA_PAGE);
         checkBoxPage.expandAllCheckbox();
+        checkBoxPage.clickRandomCheckbox();
+        checkBoxPage.getCheckboxesNames();
     }
 }
