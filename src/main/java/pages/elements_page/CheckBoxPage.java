@@ -26,7 +26,7 @@ public class CheckBoxPage extends BasePage {
         List<WebElement> allCheckboxes = driver.findElements(checkboxes);
         int count = 20;
         do {
-            WebElement item = allCheckboxes.get((int) (Math.random() * 15)+1);
+            WebElement item = allCheckboxes.get((int) (Math.random() * 7)+1);
             item.click();
             count -= 1;
         }
@@ -37,10 +37,12 @@ public class CheckBoxPage extends BasePage {
         List<WebElement> checkedElements = driver.findElements(checkedItem);
         StringBuffer data = new StringBuffer();
         for (int i=0; i< checkedElements.size(); i++){
-            String s = driver.findElements(By.x);
-            data.append(s);
+            String s = driver.findElements(By.xpath("//ancestor::span[@class='rct-title']")).get(i).getText();
+            data.append(s + ' ');
             System.out.println("text: "+ s);
         }
+
+        System.out.println(data);
 
 
     }
