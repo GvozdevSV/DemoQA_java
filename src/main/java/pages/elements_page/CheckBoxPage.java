@@ -35,10 +35,10 @@ public class CheckBoxPage extends BasePage {
     }
     public void getCheckboxesNames(){
         List<WebElement> checkedElements = driver.findElements(checkedItem);
-        String [] data = {};
+        StringBuffer data = new StringBuffer();
         for (int i=0; i< checkedElements.size(); i++){
-            String s = checkedElements.get(i).getText();
-            data = append(data, s);
+            String s = driver.findElements(By.x);
+            data.append(s);
             System.out.println("text: "+ s);
         }
 
