@@ -15,6 +15,7 @@ public class CheckBoxPage extends BasePage {
     private final By expandAllButton = By.cssSelector("button[title=\"Expand all\"]");
     private final By checkboxes = By.cssSelector("span[class=\"rct-checkbox\"]");
     private final By checkedItem = By.cssSelector("svg[class='rct-icon rct-icon-check']");
+    private final By haveSelected = By.cssSelector("span[class=\"text-success\"]");
 
 
 
@@ -37,7 +38,8 @@ public class CheckBoxPage extends BasePage {
         List<WebElement> checkedElements = driver.findElements(checkedItem);
         StringBuffer data = new StringBuffer();
         for (int i=0; i< checkedElements.size(); i++){
-            String s = driver.findElements(By.xpath("//ancestor::span[@class='rct-title']")).get(i).getText();
+            WebElement b = scrollToElement(driver.findElement(By.xpath("//ancestor::span[@class='rct-title']")[i]);
+            String s = b.getText();
             data.append(s + ' ');
             System.out.println("text: "+ s);
         }
@@ -45,6 +47,17 @@ public class CheckBoxPage extends BasePage {
         System.out.println(data);
 
 
+    }
+    public void getSelectedText() throws InterruptedException {
+        scrollToElement(driver.findElement(haveSelected));
+        List<WebElement> selectedText = driver.findElements(haveSelected);
+        StringBuffer data = new StringBuffer();
+        for (int i=0; i< selectedText.size(); i++){
+            String s = selectedText.get(i).getText();
+            data.append(s + ' ');
+            System.out.println("text: "+ s);
+        }
+        System.out.println(data);
     }
 
 }
