@@ -19,5 +19,6 @@ public class CheckBoxTests extends BaseTest {
         TimeUnit.SECONDS.sleep(5);
         checkBoxPage.getSelectedText();
         TimeUnit.SECONDS.sleep(5);
+        checkBoxPage.assertInputOutput();
     }
 }
