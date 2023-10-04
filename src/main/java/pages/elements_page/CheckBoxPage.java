@@ -37,11 +37,18 @@ public class CheckBoxPage extends BasePage {
     public void getCheckboxesNames(){
         List<WebElement> checkedElements = driver.findElements(checkedItem);
         StringBuffer data = new StringBuffer();
-        for (int i=0; i<= checkedElements.size(); i++){
-            String s = driver.findElements(By.xpath("//following-sibling::span[@class='rct-title']")).get(i).getText();
+        for (WebElement c : checkedElements) {
+            WebElement a = c.findElement(By.xpath(".//ancestor::span[@class='rct-text'"));
+            String s = a.getText();
             data.append(s + ' ');
-            //System.out.println("text: "+ s);
         }
+
+
+//        for (int i=0; i<= checkedElements.size(); i++){
+//            String s = driver.findElements(By.xpath("//following-sibling::span[@class='rct-title']")).get(i).getText();
+//            data.append(s + ' ');
+//            //System.out.println("text: "+ s);
+//        }
 
         System.out.println(data);
 
