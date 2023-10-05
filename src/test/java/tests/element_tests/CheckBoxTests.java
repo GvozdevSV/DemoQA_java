@@ -16,9 +16,7 @@ public class CheckBoxTests extends BaseTest {
         checkBoxPage.expandAllCheckbox();
         checkBoxPage.clickRandomCheckbox();
         checkBoxPage.getCheckboxesNames();
-        TimeUnit.SECONDS.sleep(5);
         checkBoxPage.getSelectedText();
-        TimeUnit.SECONDS.sleep(5);
         checkBoxPage.assertInputOutput();
     }
 }

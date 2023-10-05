@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import pages.elements_page.CheckBoxPage;
+import pages.elements_page.RadiButtonPage;
 import pages.elements_page.TextBoxPage;
 import pages.pages_base.BasePage;
 
@@ -18,6 +19,7 @@ public class BaseTest {
     protected BasePage basePage = new BasePage(driver);
     protected TextBoxPage textBoxPage = new TextBoxPage(driver);
     protected CheckBoxPage checkBoxPage = new CheckBoxPage(driver);
+    protected RadiButtonPage radioButtonPage = new RadiButtonPage(driver);
 
     public void clearCookiesAndLocalStorage() {
         if (CLEAR_COOKIES_AND_STORAGE) {

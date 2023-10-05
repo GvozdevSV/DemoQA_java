@@ -27,7 +27,4 @@ public class BasePage {
         Thread.sleep(500);
     }
 
-
-
-
 }
