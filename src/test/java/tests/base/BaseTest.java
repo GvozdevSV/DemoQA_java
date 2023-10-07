@@ -8,6 +8,7 @@ import org.testng.annotations.AfterTest;
 import pages.elements_page.CheckBoxPage;
 import pages.elements_page.RadiButtonPage;
 import pages.elements_page.TextBoxPage;
+import pages.elements_page.WebTablesPage;
 import pages.pages_base.BasePage;
 
 import static common.Config.CLEAR_COOKIES_AND_STORAGE;
@@ -20,7 +21,7 @@ public class BaseTest {
     protected TextBoxPage textBoxPage = new TextBoxPage(driver);
     protected CheckBoxPage checkBoxPage = new CheckBoxPage(driver);
     protected RadiButtonPage radioButtonPage = new RadiButtonPage(driver);
-
+    protected WebTablesPage webTablesPage = new WebTablesPage(driver);
     public void clearCookiesAndLocalStorage() {
         if (CLEAR_COOKIES_AND_STORAGE) {
             JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;

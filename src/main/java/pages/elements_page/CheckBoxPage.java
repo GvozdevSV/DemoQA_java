@@ -34,7 +34,8 @@ public class CheckBoxPage extends BasePage {
     public StringBuffer getCheckboxesNames() throws InterruptedException{//получить имена выбранных чекбоксов
         List<WebElement> checkedElements = driver.findElements(checkedItem);
         StringBuffer data = new StringBuffer();
-        for (int i=0; i< checkedElements.size(); i++){
+        for (int i=
+             0; i< checkedElements.size(); i++){
             WebElement f = checkedElements.get(i).findElement(By.xpath(".//ancestor::span[@class='rct-text']"));
             String s = f.getText();
             data.append(s.toLowerCase() + ' ');
