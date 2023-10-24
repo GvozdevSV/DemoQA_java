@@ -9,8 +9,9 @@ public class WebTablesTests extends BaseTest {
     @Test
     public void AddNewPersonTest(){
         basePage.open(WEB_TABLES_DEMO_QA_PAGE);
-        webTablesPage.AddNewPerson();
-
+        //webTablesPage.AddNewPerson();
+        //webTablesPage.GetPersonFromTable();
+        webTablesPage.checkOutPerson();
 
     }
 
