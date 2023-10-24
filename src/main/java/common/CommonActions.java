@@ -15,11 +15,10 @@ public class CommonActions {
         switch (PLATFORM_AND_BROWSER) {
             case "win_chrome":
                 ChromeOptions options = new ChromeOptions();
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver-win32/chromedriver.exe");
                 options.addArguments("--remote-allow-origins=*");
                 driver = new ChromeDriver(options);
                 break;
-
 
         }
 
