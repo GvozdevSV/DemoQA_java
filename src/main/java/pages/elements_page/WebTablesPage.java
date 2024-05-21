@@ -29,7 +29,7 @@ public class WebTablesPage extends BasePage {
 
 
 
-    public String AddNewPerson(){
+    public String AddNewPerson() throws InterruptedException {
         waitElementIsVisible(driver.findElement(addButton)).click();
         waitElementIsVisible(driver.findElement(firstNameField)).sendKeys(FIRST_NAME);
         waitElementIsVisible(driver.findElement(lastNameField)).sendKeys(LAST_NAME);
@@ -53,9 +53,12 @@ public class WebTablesPage extends BasePage {
 
         return allPerson.toString();
     }
-    public void checkOutPerson(){
+    public void checkOutPerson() throws InterruptedException {
         String b = AddNewPerson();
         String a = GetPersonFromTable();
+        //wait(300);
+        System.out.println(a);
+
         Assert.assertTrue(a.contains(b),"Добавленной персоны нет в таблице");
     }
 

@@ -7,11 +7,10 @@ import static constants.Constant.Urls.WEB_TABLES_DEMO_QA_PAGE;
 
 public class WebTablesTests extends BaseTest {
     @Test
-    public void AddNewPersonTest(){
+    public void AddNewPersonTest() throws InterruptedException {
         basePage.open(WEB_TABLES_DEMO_QA_PAGE);
-        //webTablesPage.AddNewPerson();
-        //webTablesPage.GetPersonFromTable();
         webTablesPage.checkOutPerson();
+        wait(300);
 
     }
 
